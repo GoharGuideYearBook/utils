@@ -8,7 +8,7 @@ def get_dict(csv_file_path):
         for row in csv_reader:
             data.append({
                 "name": row["What's your Discord username?"],
-                "role": "Alumni Staff",
+                "role": "Role",
                 "quote": row["Leave a quote for the yearbook. Make sure your quote doesn't exceed over 100 characters!"],
                 "img": "images/" + row["What's your Discord username?"] + ".webp"
             })
@@ -18,5 +18,5 @@ def get_json(data, json_file_path):
     with open(json_file_path, mode='w', encoding='utf-8') as json_file:
         json.dump(data, json_file, indent=4, ensure_ascii=False)
 
-a = get_dict("test.csv")
+a = get_dict("form.csv")
 get_json(a, "people.json")
