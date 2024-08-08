@@ -19,7 +19,7 @@ def get_image(file, question_1, question_2):
     
     return pfp_pics
 
-entries = get_image("test.csv", "What's your Discord username?", "Provide your Discord profile picture.")
+entries = get_image("form.csv", "What's your Discord username?", "Provide your Discord profile picture.")
 
 def download_image(url, save_as):
     gdown.download(url, "images/" + save_as, quiet=False,fuzzy=True)
